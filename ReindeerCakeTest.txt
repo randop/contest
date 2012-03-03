@@ -1,0 +1,17 @@
+Programming test for Reindeer
+
+Using cakePHP (either 1.3 or 2.0 - we have been using 1.3 for the vast majority of our projects, even though 2.0 has been released) - create a simple web application.
+
+Outline of the app:
+	The application needs to be a very simple contest creation and entry applications.  
+	You need to be able to create a contest, edit it and have a user be able to enter it. 
+	Creating a database is required to save the application data.
+
+Requirements:
+	- The contest should have a name, a description, and a created_on date.
+	- The entry needs to contain the entrant's name, entry date, and be associated with whatever contest that it's an entry for.
+	- We will need an export/dump of the database that you create.
+	
+Bonus points:
+	- Once the application is built, any styling that isn't the default cakePHP styling
+	- Make the contest administration (creation, editing, etc...) password protected - all using the cakePHP admin conventions.
