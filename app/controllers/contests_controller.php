@@ -6,12 +6,9 @@
 		
 		var $uses = array('Contest', 'Participant');
 		
-		var $helpers = array('Html', 'Form');
-		
 		function index() {
 			
-			$this->set('contests',$this->Contest->find('all'));
-			
+			$this->set('contests', $this->Contest->find('all') );
 		}
 		
 		function add() {
@@ -73,9 +70,17 @@
 				
 				$the_contest = $this->Contest->find(array('contest_id' => $id));
 				
-				$this->set( 'contest' , $the_contest );
+				if ( !empty($the_contest) )
+				{
+					$this->set( 'contest' , $the_contest );
 				
-				$this->set( 'contest_participants' , $the_contest['Participant'] );
+					$this->set( 'contest_participants' , $the_contest['Participant'] );
+				}
+				else
+				{
+					$this->Session->setFlash("Oops! That record does not exists.");
+					$this->redirect(array('action'=>'index'), null, true);
+				}
 				
 				
 			}

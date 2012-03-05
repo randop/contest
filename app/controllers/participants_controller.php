@@ -6,10 +6,9 @@
 		
 		var $uses = array('Contest', 'Participant');
 		
-		var $helpers = array('Html', 'Form');
+		var $helpers = array('Js');
 		
 		function index() {
-			
 			$this->set('participants',$this->Participant->find('all'));
 			
 		}

@@ -1,6 +1,7 @@
 <div class="header_title">
 	<h2>Participants</h2>
-	<?php echo $html->link('Create New', array('action'=>'add') , array('class'=>'newbutton') ); ?>
+	<?php echo $this->Html->script('test',FALSE); ?>
+	<?php echo $this->Html->link('Create New', array('action'=>'add') , array('class'=>'newbutton') ); ?>
 </div>
 
 <?php if(empty($participants)): ?>

@@ -2,8 +2,13 @@
 <html>
 	<head>
 		<title>Contest Application</title>
-		<?php echo $html->css('core'); ?>
-	
+		<?php 
+			echo $html->css('core');
+		
+			echo $scripts_for_layout;
+			
+			echo $this->Js->writeBuffer( array('cache'=>TRUE) );
+		?>
 	</head>
 	<body>
 		<div id="container">
