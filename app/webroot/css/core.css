@@ -132,7 +132,7 @@ input[type=submit] {
 		0px 1px 0px rgba(255,255,255,0.3);
 }
 
-form input[type=text], textarea {
+form input[type=text], input[type=password] , textarea {
 	clear: both;
 	font-size: 140%;
 	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
@@ -156,7 +156,7 @@ form label {
 	padding-left : 8px;
 }
 	#header a {
-		color : white;
+		color : yellow;
 		text-decoration : none;
 	}
 
@@ -216,11 +216,17 @@ fieldset {
 	display : none;
 }
 
-#flashMessage {
+#flashMessage, #authMessage {
 	border : solid 1px #C24641;
 	color : white;
 	font-size : 15pt;
 	background-color : #E77471;
 	padding : 5px;
 	border-collapse : collapse;
+	margin-bottom : 18px;
+}
+
+#authdiv{
+	float : right;
+	padding-right : 18px;
 }

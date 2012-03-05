@@ -28,5 +28,13 @@ CREATE TABLE `contests_participants` (
 	UNIQUE idx_cp (`contest_id`,`participant_id`)
 );
 
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users`(
+	`id` INT UNSIGNED AUTO_INCREMENT NOT NULL, 
+	`username` VARCHAR(255) NOT NULL,
+	`password` CHAR(40) NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
 
 CREATE DATABASE `contest_test`;
