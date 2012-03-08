@@ -12,7 +12,9 @@
 	            'password' => 'secretword'
 	            );
 	        */
-			$this->Auth->allow('add');
+			//$this->Auth->allow('add','login','logout');
+			
+			$this->Auth->allow('*');
 	    }
 	
 		public function add() {
@@ -28,7 +30,9 @@
 		}			
 	
 		public function login() {
-			
+			if ($this->Session->read('Auth.User')) {
+			       $this->redirect('/', null, false);
+		    }
 		}
 	
 		public function logout() {

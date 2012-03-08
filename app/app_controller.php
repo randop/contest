@@ -9,13 +9,15 @@
 						);
 
 		public function isAuthorized() {
-			return true;
+			return false;
 		}
 		
 		public function beforeFilter() {
 			
 		    $this->Auth->loginError = "You have provided invalid username or password. Please try again.";
 		    $this->Auth->authError = "Please login to continue.";
+			
+			$this->Auth->allow(array('display','index'));
 			
 			$user = $this->Auth->user();
 			if (!empty($user)) {
